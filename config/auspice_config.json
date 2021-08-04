@@ -17,6 +17,11 @@
       "type": "categorical"
     },
     {
+      "key": "group",
+      "title": "Sequencing Lab",
+      "type": "categorical"
+    },
+    {
       "key": "pango_lineage",
       "title": "Lineage",
       "type": "categorical"
