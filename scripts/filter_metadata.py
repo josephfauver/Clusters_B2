@@ -160,6 +160,7 @@ if __name__ == '__main__':
     dfN['sequencing_date'] = ''
     dfN['group'] = ''
     dfN['facility'] = ''
+    dfN['lab'] = ''
     dfN.fillna('', inplace=True)
 
      # add tag of variant category
