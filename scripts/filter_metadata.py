@@ -159,7 +159,7 @@ if __name__ == '__main__':
     dfN['batch'] = ''
     dfN['sequencing_date'] = ''
     dfN['group'] = ''
-    dfN['Cluster_ID'] = ''
+    dfN['facility'] = ''
     dfN.fillna('', inplace=True)
 
      # add tag of variant category
@@ -177,7 +177,7 @@ if __name__ == '__main__':
     # Lab genomes metadata
     dfE = pd.read_excel(metadata2, index_col=None, header=0, sheet_name=0,
                         # 'sheet_name' must be changed to match the Excel sheet name
-                        converters={'sample': str, 'sample_id': str, 'collection-date': str, 'category': str, 'batch': str, 'group': str, 'Cluster_ID': str, 'Filter': str})  # this need to be tailored to your lab's naming system
+                        converters={'sample': str, 'facility': str, 'sample_id': str, 'collection-date': str, 'category': str, 'batch': str, 'group': str, 'Cluster_ID': str, 'Filter': str})  # this need to be tailored to your lab's naming system
     dfE.fillna('', inplace=True)
     
     dfE = dfE.rename(columns={'sample_id': 'id', 'collection-date': 'date', 'lab': 'originating_lab', 'Filter': 'filter' })
