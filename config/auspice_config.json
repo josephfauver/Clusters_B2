@@ -12,6 +12,11 @@
       "type": "categorical"
     },
     {
+      "key": "facility",
+      "title": "Facility",
+      "type": "categorical"
+    },
+    {
       "key": "batch",
       "title": "Batch",
       "type": "categorical"
@@ -64,7 +69,8 @@
     "pango_lineage",
     "division_exposure",
     "country_exposure",
-    "lab"
+    "lab",
+    "facility"
   ],
   "panels": [
     "tree",
