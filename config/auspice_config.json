@@ -63,7 +63,8 @@
     "sequencing_date",
     "pango_lineage",
     "division_exposure",
-    "country_exposure"
+    "country_exposure",
+    "group"
   ],
   "panels": [
     "tree",
