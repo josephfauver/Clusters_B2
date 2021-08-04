@@ -280,7 +280,6 @@ if __name__ == '__main__':
             dict_row['strain'] = strain
             dict_row['iso'] = get_iso(dict_row['country'])
             dict_row['originating_lab'] = dfL.loc[idx, 'originating_lab']
-            dict_row['submitting_lab'] = 'Nebraska DHHS Sequencing Initiative'
             dict_row['authors'] = row['group']
             dict_row['batch'] = 'Batch' + str('0' * (3 - len(row['batch']))) + row['batch']
             dict_row['sequencing_date'] = row['sequencing-collection-date'].strftime('%Y-%m-%d')
