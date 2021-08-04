@@ -17,8 +17,8 @@
       "type": "categorical"
     },
     {
-      "key": "group",
-      "title": "Sequencing Lab",
+      "key": "lab",
+      "title": "Originating Lab",
       "type": "categorical"
     },
     {
@@ -64,7 +64,7 @@
     "pango_lineage",
     "division_exposure",
     "country_exposure",
-    "group"
+    "lab"
   ],
   "panels": [
     "tree",
