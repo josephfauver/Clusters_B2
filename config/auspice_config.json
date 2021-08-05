@@ -22,7 +22,7 @@
       "type": "categorical"
     },
     {
-      "key": "lab",
+      "key": "originating_lab",
       "title": "Originating Lab",
       "type": "categorical"
     },
@@ -69,7 +69,7 @@
     "pango_lineage",
     "division_exposure",
     "country_exposure",
-    "lab",
+    "originating_lab",
     "facility"
   ],
   "panels": [
