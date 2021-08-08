@@ -1,10 +1,11 @@
-purpose	level	name	size	start	end
-context	region_exposure	Europe	20		03/31/21
-context	region_exposure	Asia	20		03/31/21
-context	country_exposure	USA	100		03/31/21
-ignore	country_exposure	Canada			
-ignore	country_exposure	India			
-ignore	country_exposure	South Africa			
-ignore	country_exposure	Bangladesh			
-ignore	country_exposure	Saudi Arabia			
-ignore	country_exposure	Australia			
+purpose	filter	value	filter2	value2	sample_size	start	end
+focus	pango_lineage	B.1.617.2	country	USA	200	1/1/2021	
+focus	pango_lineage	AY.3	country	USA	200	1/1/2021	
+focus	pango_lineage	AY.3.1	country	USA	200	1/1/2021	
+focus	pango_lineage	B.1.621	country	USA	50	1/1/2021	
+focus	pango_lineage	B.1.1.7	country	USA	100	1/1/2021	
+focus	pango_lineage	P.1	country	USA	50	1/1/2021	
+context	country	USA			50		12/30/2020
+context	country	USA			100	1/1/2021	
+context	region	Europe			25		12/30/2020
+context	region	Europe			25	1/1/2021	
