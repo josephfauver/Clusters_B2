@@ -159,7 +159,8 @@ if __name__ == '__main__':
     dfN['batch'] = ''
     dfN['sequencing_date'] = ''
     dfN['group'] = ''
-    dfN['Cluster_ID'] = ''
+    dfN['facility'] = ''
+    dfN['lab'] = ''
     dfN.fillna('', inplace=True)
 
      # add tag of variant category
@@ -177,7 +178,7 @@ if __name__ == '__main__':
     # Lab genomes metadata
     dfE = pd.read_excel(metadata2, index_col=None, header=0, sheet_name=0,
                         # 'sheet_name' must be changed to match the Excel sheet name
-                        converters={'sample': str, 'sample_id': str, 'collection-date': str, 'category': str, 'batch': str, 'group': str, 'Cluster_ID': str, 'Filter': str})  # this need to be tailored to your lab's naming system
+                        converters={'sample': str, 'facility': str, 'sample_id': str, 'collection-date': str, 'category': str, 'batch': str, 'group': str, 'Cluster_ID': str, 'Filter': str})  # this need to be tailored to your lab's naming system
     dfE.fillna('', inplace=True)
     
     dfE = dfE.rename(columns={'sample_id': 'id', 'collection-date': 'date', 'lab': 'originating_lab', 'Filter': 'filter' })
@@ -280,7 +281,6 @@ if __name__ == '__main__':
             dict_row['strain'] = strain
             dict_row['iso'] = get_iso(dict_row['country'])
             dict_row['originating_lab'] = dfL.loc[idx, 'originating_lab']
-            dict_row['submitting_lab'] = 'Nebraska DHHS Sequencing Initiative'
             dict_row['authors'] = row['group']
             dict_row['batch'] = 'Batch' + str('0' * (3 - len(row['batch']))) + row['batch']
             dict_row['sequencing_date'] = row['sequencing-collection-date'].strftime('%Y-%m-%d')

@@ -83,8 +83,6 @@ if __name__ == '__main__':
     # open metadata file as dataframe
     dfN = pd.read_csv(metadata, encoding='utf-8', sep='\t', dtype=str)
     df = dfN
-    print(df)
-    print(set(df['Cluster_ID'].to_list()))
     
     # set US-based geoscheme
     scheme_list = open(geoscheme, "r").readlines()[1:]
@@ -462,16 +460,16 @@ if __name__ == '__main__':
         print(category, hex)
     results['category'].update({'Other variants': '#808080'})
     
-    # Cluster identification
-    list_cluster = [up_number for up_number in set(df['Cluster_ID'].to_list()) if up_number not in [np.NAN, None, '']]
-    list_hex = list([hue_to_rgb(int(x)) for x in np.linspace(30, 240, len(list_cluster)*2, endpoint=True)])
+    # facility clustering
+    list_facility = [up_number for up_number in set(df['facility'].to_list()) if up_number not in [np.NAN, None, '']]
+    list_hex = list([hue_to_rgb(int(x)) for x in np.linspace(30, 240, len(list_facility)*2, endpoint=True)])
     skip_hex = [h for n, h in enumerate(list_hex) if n in range(0, len(list_hex), 2)][::-1]  
     
-    results['Cluster_ID'] = {}
-    for Cluster_ID, hex in zip(list_cluster, skip_hex):
-        results['Cluster_ID'].update({Cluster_ID: hex})
-        print(Cluster_ID, hex)
-    results['Cluster_ID'].update({'None': '#808080'})
+    results['facility'] = {}
+    for facility, hex in zip(list_facility, skip_hex):
+        results['facility'].update({facility: hex})
+        print(facility, hex)
+    results['facility'].update({'None': '#808080'})
 
    # for us_region, hue in usregion_hues.items():
    #     start, end = hue_to_hex[hue]
@@ -486,13 +484,6 @@ if __name__ == '__main__':
    #     results['category'].update({cat: hex})
    #     print('category', cat, hex)
 
-    # special colouring for groups
-    groups = {'Creighton': '#121de6', 'NPHL': '#9306c2', 'UNMC':'#de0707'}
-    results['group'] = {}
-
-    for gro, hex in groups.items():
-        results['group'].update({gro: hex})
-        print('group', gro, hex)
 
     ''' EXPORT COLOUR FILE '''
     with open(output, 'w') as outfile:

@@ -1,6 +1,6 @@
 {
-  "title": "Nebraska DHHS SARS-CoV-2 Genomic Analysis",
-  "build_url": "https://dhhs.ne.gov/Pages/default.aspx",
+  "title": "SARS-CoV-2 Genomic Analysis",
+  "build_url": "https://github.com/josephfauver",
   "maintainers": [
     {"name": "Joseph Fauver",
      "url": "https://grubaughlab.com/"}
@@ -12,23 +12,18 @@
       "type": "categorical"
     },
     {
+      "key": "facility",
+      "title": "Facility",
+      "type": "categorical"
+    },
+    {
       "key": "batch",
       "title": "Batch",
       "type": "categorical"
     },
     {
-      "key": "epiweek",
-      "title": "Epi Week",
-      "type": "categorical"
-    },
-    {
-      "key": "Cluster_ID",
-      "title": "Cluster ID",
-      "type": "categorical"
-    },
-    {
-      "key": "group",
-      "title": "Sequencing Lab",
+      "key": "originating_lab",
+      "title": "Originating Lab",
       "type": "categorical"
     },
     {
@@ -74,9 +69,8 @@
     "pango_lineage",
     "division_exposure",
     "country_exposure",
-    "group",
-    "Cluster_ID", 
-    "epiweek"
+    "originating_lab",
+    "facility"
   ],
   "panels": [
     "tree",
