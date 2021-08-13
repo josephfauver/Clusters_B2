@@ -57,6 +57,7 @@ if __name__ == '__main__':
                 'AY.1': 'Delta (AY.1)',
                 'AY.2': 'Delta (AY.2)',
                 'AY.3': 'Delta (AY.3)',
+                'AY.3.1': 'Delta (AY.3.1)',
                 'AY.4': 'Delta (AY.4)',
                 'AY.5': 'Delta (AY.5)',
                 'AY.6': 'Delta (AY.6)',
